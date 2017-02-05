@@ -21,7 +21,12 @@
   color: red;
 }
 .email {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: inherit;
 }
 .email .show-detail {
   width: 50%;
@@ -29,31 +34,26 @@
 .email .hide-detail {
   width: 100%;
 }
-.email .mconsole {
-  position: relative;
-  font-size: 18px;
-  font-family: inherit;
-  font-weight: inherit;
+.email .left {
+  float: left;
+}
+.email .left .mconsole {
   line-height: 1.4em;
   background: #fff;
   margin: 30px 20px 40px 20px;
   padding: 10px 10px 10px 10px;
   box-shadow: 0 0 30px black;
-  float: left;
 }
-.email .mconsole h1 {
+.email .left .mconsole h1 {
   position: absolute;
   top: -155px;
   width: 100%;
-  font-size: 100px;
-  font-weight: 100;
-  text-align: center;
   color: rgba(175, 47, 47, 0.15);
   -webkit-text-rendering: optimizeLegibility;
   -moz-text-rendering: optimizeLegibility;
   text-rendering: optimizeLegibility;
 }
-.email .mconsole .header .add {
+.email .left .mconsole .header .add {
   float: left;
   margin: 10px 0px 0px 20px;
   width: 40px;
@@ -62,7 +62,7 @@
   background-size: 100% auto;
   cursor: pointer;
 }
-.email .mconsole .header .print {
+.email .left .mconsole .header .print {
   float: right;
   margin: 10px 10px 0px 20px;
   width: 40px;
@@ -71,43 +71,42 @@
   background-size: 100% auto;
   cursor: pointer;
 }
-.email .mconsole .header .new-todo {
+.email .left .mconsole .header .new-todo {
   padding: 16px 16px 5px 5px;
   border: none;
 }
-.email .mconsole .main {
+.email .left .mconsole .main {
   position: relative;
   z-index: 2;
   border-top: 1px solid #e6e6e6;
 }
-.email .mconsole .main ul {
+.email .left .mconsole .main ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.email .mconsole .main ul li {
+.email .left .mconsole .main ul li {
   position: relative;
-  font-size: 18px;
   border-bottom: 1px solid #ededed;
   padding: 0px 20px 0px 10px;
   margin: 0px -10px 0px -10px;
 }
-.email .mconsole .main ul li.title {
+.email .left .mconsole .main ul li.title {
   height: 25px;
 }
-.email .mconsole .main ul li .cell {
+.email .left .mconsole .main ul li .cell {
   float: left;
   text-align: center;
   height: 225px;
   border: 1px solid blue;
 }
-.email .mconsole .footer {
+.email .left .mconsole .footer {
   color: #777;
   padding: 5px 15px;
   height: 30px;
   text-align: center;
 }
-.email .mconsole .footer:before {
+.email .left .mconsole .footer:before {
   content: '';
   position: absolute;
   right: 0;
@@ -117,14 +116,20 @@
   overflow: hidden;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
 }
-.email .mconsole .footer div {
+.email .left .mconsole .footer div {
   float: right;
   margin: 0px 20px 0px 0px;
 }
-.email .mdetail {
-  padding: 0px 20px 0px 10px;
-  right: 10px;
+.email .right {
   position: absolute;
   width: 50%;
+  right: 10px;
+}
+.email .right .mdetail {
+  padding: 0px 20px 0px 10px;
+  margin: 30px 0px 0px 0px;
   border: 1px solid #ededed;
+  line-height: 1.4em;
+  background: #fff;
+  box-shadow: 0 0 30px black;
 }

@@ -18,10 +18,9 @@ class header extends React.Component{
   render() {
     const { actions, router } = this.props
     const menus = [
-      {link: '/mconsole', title: 'mconsole', index: 0}
-      // ,
-      // {link: '/report', title: lang.report, index: 1},
-      // {link: '/admin', title: lang.admin, index: 2}
+      {link: '/email', title: 'Email', index: 0},
+      {link: '/case', title: 'Case', index: 1},
+      {link: '/task', title: 'Task', index: 2}
     ]
     return (
       <div className='header-area'><div>
@@ -39,7 +38,7 @@ class header extends React.Component{
   }
 }
 let mapStateToProps = state =>({
-  
+
 })
 
 let mapDispatchToProps = dispatch =>({

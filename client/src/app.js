@@ -11,8 +11,9 @@ import {Router, Route, IndexRoute, useRouterHistory} from 'react-router'
 import { createHashHistory } from 'history'
 
 import Header from './components/header'
-import mconsole from './components/email_list'
-import mdetail from './components/email_detail'
+import email from './components/email'
+import cases from './components/case'
+import tasks from './components/task'
 import store from './store'
 
 class app extends React.Component{
@@ -33,9 +34,10 @@ render(
     <Provider store={store}>
       <Router history={history}>
         <Route path="/" component={app}>
-          <IndexRoute component={mconsole} />
-          <Route path="mconsole" component={mconsole}/>
-          <Route path="mdetail" component={mdetail}/>
+          <IndexRoute component={cases} />
+          <Route path="email" component={email}/>
+          <Route path="case" component={cases}/>
+          <Route path="task" component={tasks}/>
         </Route>
       </Router>
     </Provider>,

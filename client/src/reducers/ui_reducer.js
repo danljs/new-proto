@@ -1,5 +1,5 @@
 'use strict'
-import { INITIAL, ADD, REMOVE, PRINT, SELECT, REFRESH, TOGGLE} from '../actions/index'
+import { INITIAL, REFRESH, TOGGLE} from '../actions/index'
 
 const initialState = {
   data: {},
@@ -16,18 +16,9 @@ export default (state = initialState, action) => {
         size: 10,
         data: []
       }
-
-    case ADD:
+    case REFRESH:
       new_state = Object.assign({}, state)
-      return new_state
-
-    case REMOVE:
-      new_state = Object.assign({}, state)
-      return new_state
-
-    case REFRESH: 
-      new_state = Object.assign({}, state)
-      new_state.data = action.value.data.list
+      new_state.data = action.value.list
       return new_state
 
     case TOGGLE:

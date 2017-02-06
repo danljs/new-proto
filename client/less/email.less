@@ -1,0 +1,91 @@
+.email{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	font-size: 18px;
+	font-family: inherit;
+	font-weight: inherit;
+
+	.show-detail{
+		width: 50%;
+		@media @s{
+			width: 100%;
+		}
+	}
+	.hide-detail{
+		width: 100%;
+	}
+	h1 {
+		padding: 0px 0px 0px 25px;
+	}
+	.left{
+		float: left;
+		@media @s{
+			float: none;
+		}
+		.main{
+			line-height: 1.4em;
+			background: #fff;
+			margin: 0px 20px 40px 20px;
+			padding: 10px 10px 10px 10px;
+			box-shadow: 0 0 30px black;
+			a{
+				&:hover{
+					cursor: pointer;
+				}
+			}
+			table{
+				margin-top: -1px;
+				border: 1px solid #ddd;
+			}
+			.footer{
+				color: #777;
+				padding: 5px 15px;
+				height: 60px;
+				text-align: center;
+				&:before{
+					content: '';
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					height: 50px;
+					overflow: hidden;
+					box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+			            0 8px 0 -3px #f6f6f6,
+			            0 9px 1px -3px rgba(0, 0, 0, 0.2),
+			            0 16px 0 -6px #f6f6f6,
+			            0 17px 2px -6px rgba(0, 0, 0, 0.2);
+				}
+				div{
+					float: right;
+					margin: 0px 20px 0px 0px;
+				}
+			}
+		}
+	}
+	.right{
+		position: absolute;
+		width: 50%;
+		right: 10px;
+		@media @s{
+			width: 100%;
+			right: 0px;
+			margin-top: -40px;
+		}
+		.mdetail{
+			padding: 10px 20px 10px 15px;
+			margin: 0px 0px 0px 0px;
+			overflow: scroll;
+			@media @s{
+				padding: 10px 10px 10px 10px;
+				margin: 0px 20px 40px 20px;
+				height: 150px;
+			}
+			border: 1px solid #ededed;
+			line-height: 1.4em;
+			background: #fff;
+			box-shadow: 0 0 30px black;
+		}
+	}
+}

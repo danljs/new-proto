@@ -8,31 +8,25 @@ import {withRouter, browserHistory} from 'react-router'
 class header extends React.Component{
   constructor(props) {
     super(props)
-    this.state = {
-      selected : 0
-    }
   }
   componentWillReceiveProps(nextProps){
 
   }
   render() {
-    const { actions, router } = this.props
+    const { actions, router, location } = this.props
+    const selected = location.pathname === '/' ? '/case' : location.pathname;
     const menus = [
-      {link: '/email', title: 'Email', index: 0},
-      {link: '/case', title: 'Case', index: 1},
-      {link: '/task', title: 'Task', index: 2}
+      {link: '/email', title: 'Email'},
+      {link: '/case', title: 'Case'},
+      {link: '/task', title: 'Task'}
     ]
     return (
       <div className='header-area'><div>
         {
           menus.map((c,i) => <a key={i} onClick={e => {
             router.push(c.link)
-            this.setState({selected : i})
-          }} className={this.state.selected === c.index ? 'selected':''}>{c.title}</a>)
+          }} className={selected === c.link ? 'selected':''}>{c.title}</a>)
         }
-        {/*
-        <a onClick={e => actions.change_lang(lang.change_id)}>{lang.name}</a>
-      */}
       </div></div>
     )
   }

@@ -2,13 +2,13 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+
 import * as Actions from '../actions'
 import Mdetail from './email_detail'
 
-class mconsole extends React.Component{
+class email extends React.Component{
   constructor(props) {
     super(props)
-    this.state = {}
   }
   componentDidMount() {
     this.props.actions.request({
@@ -18,17 +18,6 @@ class mconsole extends React.Component{
     })
   }
 
-  // componentWillReceiveProps(nextProps){
-  //   debugger
-  //   if(nextProps.ui.target.url !== this.state.url) {
-  //     this.props.actions.request({
-  //       url: nextProps.ui.url, 
-  //       from: nextProps.ui.from, 
-  //       size: nextProps.ui.size
-  //     })
-  //   }
-  // }
-
   render() {
     const {ui, actions} = this.props
     return (
@@ -36,16 +25,32 @@ class mconsole extends React.Component{
       <h1>Email</h1>
         <div className={ui.display ? 'left show-detail' : 'left hide-detail'} >
           <div className='mconsole'>
-            <div></div>
+            <ul className="nav nav-tabs">
+              <li role="presentation" className="active"><a href="#">Home</a></li>
+              <li role="presentation"><a href="#">Profile</a></li>
+              <li role="presentation"><a href="#">Messages</a></li>
+            </ul>
             <div className='row header'>
               <div className='add' onClick={e => actions.add()}/>
               <div className='add' onClick={e => actions.toggle()}/>
               <div className='print' onClick={e => actions.print()}/>
             </div>
+
             <section className='main'><ul>
               <li className='row title'>
               </li>
-              {
+              <table className="table table-hover table-striped">
+                <thead>
+                  <tr><th>Firstname</th><th>Lastname</th><th>Email</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>John</td><td>Doe</td><td>john@example.com</td></tr>
+                  <tr><td>Mary</td><td>Moe</td><td>mary@example.com</td></tr>
+                  <tr><td>July</td><td>Dooley</td><td>july@example.com</td></tr>
+                  <tr><td>July</td><td>Dooley</td><td>july@example.com</td></tr>
+                </tbody>
+              </table>
+              {/*
                 ui.data.map((c,i) => 
                   <div key={i}>
                     <div>{c.id}</div>
@@ -54,12 +59,23 @@ class mconsole extends React.Component{
                     <div>{c.date}</div>
                   </div>
                 )
-              }
+              */}
             </ul></section>
             <div className='footer'>
-              <div>{ui.summary}</div>
+              <nav aria-label="Page navigation">
+                <ul className="pagination">
+                  <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                  <li className="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+              </nav>
             </div>
           </div>
+          
         </div>
         {
           ui.display ? <div className='right'><Mdetail/></div> : ''
@@ -70,7 +86,6 @@ class mconsole extends React.Component{
 }
 
 let mapStateToProps = state =>({
-  lang: state.lang,
   ui: state.ui
 })
 
@@ -81,4 +96,4 @@ let mapDispatchToProps = dispatch =>({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(mconsole)
+)(email)

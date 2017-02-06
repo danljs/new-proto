@@ -28,7 +28,7 @@ class app extends React.Component{
 	}
 }
 //const history = syncHistoryWithStore(useRouterHistory(createHashHistory)({ queryKey: false }), store)
-const history = useRouterHistory(createHashHistory)({ queryKey: false })
+const history = useRouterHistory(createHashHistory)()
 
 render(
     <Provider store={store}>

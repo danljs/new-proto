@@ -2,10 +2,9 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import {withRouter} from 'react-router'
 import * as Actions from '../actions'
 
-class mdetail extends React.Component{
+class email_detail extends React.Component{
   constructor(props) {
     super(props)
     this.state = {}
@@ -34,4 +33,4 @@ let mapDispatchToProps = dispatch =>({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withRouter(mdetail))
+)(email_detail)

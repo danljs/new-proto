@@ -22,11 +22,9 @@ class header extends React.Component{
     ]
     return (
       <div className='header-area'><div>
-        {
-          menus.map((c,i) => <a key={i} onClick={e => {
-            router.push(c.link)
-          }} className={selected === c.link ? 'selected':''}>{c.title}</a>)
-        }
+      {
+        menus.map((c,i) => <a key={i} className={selected === c.link ? 'selected':''} onClick={e => router.push(c.link)}>{c.title}</a>)
+      }
       </div></div>
     )
   }

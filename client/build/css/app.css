@@ -1,5 +1,6 @@
 .header-area {
-  padding: 5px 30px 45px ;
+  padding: 5px 30px 45px;
+  background-color: #000;
 }
 .header-area div {
   float: right;
@@ -31,24 +32,17 @@
 .email .show-detail {
   width: 50%;
 }
-@media all and (max-width:845px) {
-  .email .show-detail {
-    width: 100%;
-  }
-}
 .email .hide-detail {
   width: 100%;
 }
 .email h1 {
   padding: 0px 0px 0px 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .email .left {
   float: left;
-}
-@media all and (max-width:845px) {
-  .email .left {
-    float: none;
-  }
+  min-width: 425px;
 }
 .email .left .main {
   line-height: 1.4em;
@@ -62,6 +56,7 @@
 }
 .email .left .main table {
   margin-top: -1px;
+  margin-bottom: 0px;
   border: 1px solid #ddd;
 }
 .email .left .main .footer {
@@ -86,29 +81,45 @@
 }
 .email .right {
   position: absolute;
+  min-width: 425px;
   width: 50%;
   right: 10px;
 }
-@media all and (max-width:845px) {
-  .email .right {
-    width: 100%;
-    right: 0px;
-    margin-top: -40px;
-  }
-}
 .email .right .mdetail {
+  height: 100%;
   padding: 10px 20px 10px 15px;
   margin: 0px 0px 0px 0px;
-  overflow: scroll;
   border: 1px solid #ededed;
   line-height: 1.4em;
   background: #fff;
   box-shadow: 0 0 30px black;
 }
+.email .right .mdetail .content {
+  overflow: auto;
+  height: 250px;
+}
 @media all and (max-width:845px) {
+  .email .show-detail {
+    width: 100%;
+  }
+  .email .left {
+    float: none;
+  }
+  .email .right {
+    width: 100%;
+    right: 0px;
+    margin-top: -37px;
+    position: relative;
+  }
   .email .right .mdetail {
-    padding: 10px 10px 10px 10px;
     margin: 0px 20px 40px 20px;
-    height: 150px;
+    padding: 10px 10px 10px 10px;
+    height: 200px;
+  }
+  .email .right .mdetail hr {
+    margin: 0px 0px 0px 0px;
+  }
+  .email .right .mdetail .content {
+    height: 100px;
   }
 }

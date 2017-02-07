@@ -59,9 +59,11 @@
   margin-bottom: 0px;
   border: 1px solid #ddd;
 }
+.email .left .main table .highlight {
+  background-color: red;
+}
 .email .left .main .footer {
   color: #777;
-  padding: 5px 15px;
   height: 60px;
   text-align: center;
 }

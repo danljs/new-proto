@@ -52,7 +52,7 @@ class email extends React.Component{
               <tbody>
                 <tr onClick={e => actions.toggle()}><td><input type='checkBox'/>&nbsp;asdfdfa</td><td>Doe</td><td>john@example.com</td></tr>
                 
-                <tr><td><input type='checkBox'/>&nbsp;sdkfj</td><td>Moe</td><td>mary@example.com</td></tr>
+                <tr className='highlight'><td><input type='checkBox'/>&nbsp;sdkfj</td><td>Moe</td><td>mary@example.com</td></tr>
                 <tr><td><input type='checkBox'/>&nbsp;sdf</td><td>Dooley</td><td>july@example.com</td></tr>
                 <tr><td><input type='checkBox'/>&nbsp;sdfdsfs</td><td>Dooley</td><td>july@example.com</td></tr>
                 <tr><td><input type='checkBox'/>&nbsp;sdfdsfs</td><td>Dooley</td><td>july@example.com</td></tr>

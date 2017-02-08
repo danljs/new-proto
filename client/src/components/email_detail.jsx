@@ -21,11 +21,25 @@ class email_detail extends React.Component{
         <hr/>
         <div className='content'>
           <div>A qui cela concerne,</div>
-          <div>&nbsp;&nbsp;&nbsp;&nbsp;
+          <br/>
+          <div>
           Aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks. Sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk
           aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks.
           </div>
-          <div>&nbsp;&nbsp;&nbsp;&nbsp;
+          <br/>
+          <div>
+          Kjhdsfk sdhwj kjhdsfk kjhdsfk
+          aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk
+          aidj djow.
+          </div>
+          <br/>
+          <div>
+          Kjhdsfk sdhwj kjhdsfk kjhdsfk
+          aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk
+          aidj djow.
+          </div>
+          <br/>
+          <div>
           Kjhdsfk sdhwj kjhdsfk kjhdsfk
           aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk
           aidj djow.

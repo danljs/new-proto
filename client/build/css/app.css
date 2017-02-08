@@ -44,7 +44,7 @@
   float: left;
   top: 50px;
   bottom: 55px;
-  min-width: 450px;
+  min-width: 460px;
   position: absolute;
 }
 .email .left .main {
@@ -70,7 +70,7 @@
 }
 .email .left .main .table-fixed tbody {
   overflow-y: auto;
-  height: 300px;
+  height: 420px;
   width: 100%;
 }
 .email .left .main .table-fixed thead,
@@ -91,20 +91,11 @@
   text-align: center;
 }
 .email .left .main .footer .pagination {
+  padding-top: 4px;
   margin: 0px 0px 0px 0px;
 }
-.email .left .main .footer:before {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 50px;
-  overflow: hidden;
-}
-.email .left .main .footer div {
-  float: right;
-  margin: 0px 20px 0px 0px;
+.email .left .main .footer .pagination li a {
+  padding: 3px 12px 3px 12px;
 }
 .email .right {
   position: absolute;
@@ -112,7 +103,7 @@
   width: 50%;
   right: 10px;
   top: 50px;
-  bottom: 55px;
+  bottom: 57px;
 }
 .email .right .mdetail {
   height: 100%;
@@ -124,24 +115,26 @@
   box-shadow: 0 0 30px black;
 }
 .email .right .mdetail .content {
-  overflow: auto;
+  overflow-y: auto;
+  height: 420px;
 }
-@media all and (max-width:895px) {
+@media all and (max-width:920px) {
   .email .show-detail {
     width: 100%;
-  }
-  .email .left {
     float: none;
     height: 50%;
     top: 0px;
     bottom: 0px;
     position: relative;
   }
-  .email .left .main {
+  .email .show-detail .main {
     height: 100%;
   }
-  .email .left .main .table-fixed tbody {
+  .email .show-detail .main .table-fixed tbody {
     height: 200px;
+  }
+  .email .show-detail .main .footer .pagination {
+    padding-top: 2px;
   }
   .email .right {
     width: 100%;
@@ -154,7 +147,7 @@
   .email .right .mdetail {
     margin: 0px 20px 40px 20px;
     padding: 10px 10px 10px 10px;
-    height: 220px;
+    height: 225px;
   }
   .email .right .mdetail hr {
     margin: 0px 0px 0px 0px;

@@ -21,7 +21,7 @@
 		float: left;
 		top: 50px;
 		bottom: 55px;
-		min-width: 450px;
+		min-width: 460px;
 		position: absolute;
 		.main{
 			line-height: 1.4em;
@@ -48,7 +48,7 @@
 				}
 				tbody{
 					overflow-y: auto;
-					height: 300px;
+					height: 420px;
 					width: 100%;
 				}
 				thead, tbody, tr, td, th{
@@ -64,25 +64,11 @@
 				height: 35px;
 				text-align: center;
 				.pagination{
+					padding-top: 4px;
 					margin: 0px 0px 0px 0px;
-				}
-				&:before{
-					content: '';
-					position: absolute;
-					right: 0;
-					bottom: 0;
-					left: 0;
-					height: 50px;
-					overflow: hidden;
-					// box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
-			  //           0 8px 0 -3px #f6f6f6,
-			  //           0 9px 1px -3px rgba(0, 0, 0, 0.2),
-			  //           0 16px 0 -6px #f6f6f6,
-			  //           0 17px 2px -6px rgba(0, 0, 0, 0.2);
-				}
-				div{
-					float: right;
-					margin: 0px 20px 0px 0px;
+					li a{
+						padding: 3px 12px 3px 12px;
+					}
 				}
 			}
 		}
@@ -93,7 +79,7 @@
 		width: 50%;
 		right: 10px;
 		top: 50px;
-		bottom: 55px;
+		bottom: 57px;
 		.mdetail{
 			height: 100%;
 			padding: 10px 20px 10px 15px;
@@ -103,8 +89,8 @@
 			background: #fff;
 			box-shadow: 0 0 30px black;
 			.content{
-				overflow: auto;
-				// height: 250px;
+				overflow-y: auto;
+				height: 420px;
 			}
 		}
 	}
@@ -112,8 +98,6 @@
 	@media @s{
 		.show-detail{
 			width: 100%;
-		}
-		.left{
 			float: none;
 			height: 50%;
 			top: 0px;
@@ -121,23 +105,17 @@
 			position: relative;
 			.main{
 				height: 100%;
-			.table-fixed{
-				// thead{
-				// 	width: 97%;
-				// }
-				tbody{
-					// overflow-y: auto;
-					height: 200px;
-					// width: 100%;
+				.table-fixed{
+					tbody{
+						height: 200px;
+					}
 				}
-				// thead, tbody, tr, td, th{
-				// 	display: block;
-				// }
-				// tbody td, thead > tr > th{
-				// 	float: left;
-				// 	border-bottom-width: 0;
-				// }
-			}}
+				.footer{
+					.pagination{
+						padding-top: 2px;
+					}
+				}
+			}
 		}
 		.right{
 			width: 100%;
@@ -149,8 +127,7 @@
 			.mdetail{
 				margin: 0px 20px 40px 20px;
 				padding: 10px 10px 10px 10px;
-
-				height: 220px;
+				height: 225px;
 				hr{
 					margin: 0px 0px 0px 0px;
 				}

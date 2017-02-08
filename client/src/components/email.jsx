@@ -11,7 +11,22 @@ class email extends React.Component{
     super(props)
     this.state={ 
       active: 0,
-      page: 1
+      page: 1,
+      detail: false,
+      data : [
+      { number: '1asdfdf', subject: 'Doe', address: 'john@example.com', selected: false },
+      { number: '2sdkfj', subject: 'Moe', address: 'mary@example.com', selected: false },
+      { number: '3sdf', subject: 'Dooley', address: 'july@example.com', selected: false },
+      { number: '4sdf', subject: 'Dooley', address: 'july@example.com', selected: false },
+      { number: '5sdf', subject: 'Dooley', address: 'july@example.com', selected: false },
+      { number: '6sdf', subject: 'Dooley', address: 'july@example.com', selected: false },
+      { number: '7sdf', subject: 'Dooley', address: 'july@example.com', selected: false },
+      { number: '8sdf', subject: 'Dooley', address: 'july@example.com', selected: false },
+      { number: '9sdf', subject: 'Dooley', address: 'july@example.com', selected: false },
+      { number: '10sdf', subject: 'Dooley', address: 'july@example.com', selected: false },
+      { number: '11sdf', subject: 'Dooley', address: 'july@example.com', selected: false },
+      { number: '12sdf', subject: 'Dooley', address: 'july@example.com', selected: false }
+    ]
     }
   }
   componentDidMount() {
@@ -29,69 +44,56 @@ class email extends React.Component{
     return (
       <div className='email'>
         <h1>Email</h1>
-        <div className={ui.display ? 'left show-detail' : 'left hide-detail'} >
+        <div className={this.state.detail ? 'left show-detail' : 'left hide-detail'} >
           <div className='main'>
-            <ul className="nav nav-tabs">
+            <ul className='nav nav-tabs'>
             {
               tabs.map(c => 
-                <li key={c.index}role="presentation" className={this.state.active === c.index ? 'active' : ''}>
+                <li key={c.index}role='presentation' className={this.state.active === c.index ? 'active' : ''}>
                   <a onClick={()=>this.setState({active: c.index})}>{c.text}</a>
                 </li> 
               )
             }
             </ul>
-            <table className="table table-hover table-striped">
+            <table className='table table-fixed table-hover table-striped'>
               <thead>
                 <tr>
-                  <th>Number</th>
-                  <th>Subject</th>
-                  <th>From</th>
+                  <th className='col-xs-3'>Number</th>
+                  <th className='col-xs-3'>Subject</th>
+                  <th className='col-xs-6'>From</th>
                 </tr>
               </thead>
-              
               <tbody>
-                <tr onClick={e => actions.toggle()}><td><input type='checkBox'/>&nbsp;asdfdfa</td><td>Doe</td><td>john@example.com</td></tr>
-                
-                <tr className='highlight'><td><input type='checkBox'/>&nbsp;sdkfj</td><td>Moe</td><td>mary@example.com</td></tr>
-                <tr><td><input type='checkBox'/>&nbsp;sdf</td><td>Dooley</td><td>july@example.com</td></tr>
-                <tr><td><input type='checkBox'/>&nbsp;sdfdsfs</td><td>Dooley</td><td>july@example.com</td></tr>
-                <tr><td><input type='checkBox'/>&nbsp;sdfdsfs</td><td>Dooley</td><td>july@example.com</td></tr>
-                <tr><td><input type='checkBox'/>&nbsp;sdfdsfs</td><td>Dooley</td><td>july@example.com</td></tr>
-                <tr><td><input type='checkBox'/>&nbsp;sdfdsfs</td><td>Dooley</td><td>july@example.com</td></tr>
-                <tr><td><input type='checkBox'/>&nbsp;sdfdsfs</td><td>Dooley</td><td>july@example.com</td></tr>
-                <tr><td><input type='checkBox'/>&nbsp;sdfdsfs</td><td>Dooley</td><td>july@example.com</td></tr>
-                <tr><td><input type='checkBox'/>&nbsp;sdfdsfs</td><td>Dooley</td><td>july@example.com</td></tr>
+              {
+                this.state.data.map((c,i) => 
+                  <tr key={i} className={c.selected ? 'highlight' : ''} 
+                    onClick={e => { 
+                      this.setState({ detail: !c.selected })
+                      c.selected = !c.selected 
+                    }}>
+                    <td className='col-xs-3'><input type='checkBox' checked={c.selected} />&nbsp;{c.number}</td>
+                    <td className='col-xs-3'>{c.subject}</td>
+                    <td className='col-xs-6'>{c.address}</td>
+                  </tr>  
+                )
+              }
               </tbody>
             </table>
-            {/*
-              ui.data.map((c,i) => 
-                <div key={i}>
-                  <div>{c.id}</div>
-                  <div>{c.subject}</div>
-                  <div>{c.from}</div>
-                  <div>{c.date}</div>
-                </div>
-              )
-            */}
-            <div className='footer'>
-              <nav aria-label="Page navigation">
-                <ul className="pagination">
-                  <li><a onClick={() => ''} aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                  {
-                    pages.map(c =>
-                      <li key={c.no} className={this.state.page === c.no ? 'active' : ''}>
-                        <a onClick={()=>this.setState({page: c.no})}>{c.no}</a>
-                      </li>
-                    )
-                  }
-                  <li><a onClick={() => ''} aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-                </ul>
-              </nav>
-            </div>
+            <div className='footer'><nav aria-label='Page navigation'><ul className='pagination'>
+              <li><a onClick={() => ''} aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>
+              {
+                pages.map(c =>
+                  <li key={c.no} className={this.state.page === c.no ? 'active' : ''}>
+                    <a onClick={()=>this.setState({page: c.no})}>{c.no}</a>
+                  </li>
+                )
+              }
+              <li><a onClick={() => ''} aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>
+            </ul></nav></div>
           </div>
         </div>
         {
-          ui.display ? <div className='right'><Mdetail/></div> : ''
+          this.state.detail ? <div className='right'><Mdetail/></div> : ''
         }
       </div>
     )

@@ -19,7 +19,10 @@
 	}
 	.left{
 		float: left;
-		min-width: 425px;
+		top: 50px;
+		bottom: 55px;
+		min-width: 450px;
+		position: absolute;
 		.main{
 			line-height: 1.4em;
 			background: #fff;
@@ -36,14 +39,33 @@
 				margin-bottom: 0px;
 				border: 1px solid #ddd;
 				.highlight{
-					background-color: red;
+					background-color: #337ab7;
+				}
+			}
+			.table-fixed{
+				thead{
+					width: 97%;
+				}
+				tbody{
+					overflow-y: auto;
+					height: 300px;
+					width: 100%;
+				}
+				thead, tbody, tr, td, th{
+					display: block;
+				}
+				tbody td, thead > tr > th{
+					float: left;
+					border-bottom-width: 0;
 				}
 			}
 			.footer{
 				color: #777;
-				// padding: 5px 15px;
-				height: 60px;
+				height: 35px;
 				text-align: center;
+				.pagination{
+					margin: 0px 0px 0px 0px;
+				}
 				&:before{
 					content: '';
 					position: absolute;
@@ -52,11 +74,11 @@
 					left: 0;
 					height: 50px;
 					overflow: hidden;
-					box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
-			            0 8px 0 -3px #f6f6f6,
-			            0 9px 1px -3px rgba(0, 0, 0, 0.2),
-			            0 16px 0 -6px #f6f6f6,
-			            0 17px 2px -6px rgba(0, 0, 0, 0.2);
+					// box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+			  //           0 8px 0 -3px #f6f6f6,
+			  //           0 9px 1px -3px rgba(0, 0, 0, 0.2),
+			  //           0 16px 0 -6px #f6f6f6,
+			  //           0 17px 2px -6px rgba(0, 0, 0, 0.2);
 				}
 				div{
 					float: right;
@@ -70,6 +92,8 @@
 		min-width: 425px;
 		width: 50%;
 		right: 10px;
+		top: 50px;
+		bottom: 55px;
 		.mdetail{
 			height: 100%;
 			padding: 10px 20px 10px 15px;
@@ -80,7 +104,7 @@
 			box-shadow: 0 0 30px black;
 			.content{
 				overflow: auto;
-				height: 250px;
+				// height: 250px;
 			}
 		}
 	}
@@ -91,22 +115,47 @@
 		}
 		.left{
 			float: none;
+			height: 50%;
+			top: 0px;
+			bottom: 0px;
+			position: relative;
+			.main{
+				height: 100%;
+			.table-fixed{
+				// thead{
+				// 	width: 97%;
+				// }
+				tbody{
+					// overflow-y: auto;
+					height: 200px;
+					// width: 100%;
+				}
+				// thead, tbody, tr, td, th{
+				// 	display: block;
+				// }
+				// tbody td, thead > tr > th{
+				// 	float: left;
+				// 	border-bottom-width: 0;
+				// }
+			}}
 		}
 		.right{
 			width: 100%;
 			right: 0px;
-			margin-top: -37px;
+			margin-top: 5px;
+			top: 0px;
+			bottom: 0px;
 			position: relative;
 			.mdetail{
 				margin: 0px 20px 40px 20px;
 				padding: 10px 10px 10px 10px;
 
-				height: 200px;
+				height: 220px;
 				hr{
 					margin: 0px 0px 0px 0px;
 				}
 				.content{
-					height: 100px;
+					height: 120px;
 				}
 			}
 		}

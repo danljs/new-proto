@@ -4,7 +4,8 @@ import 'whatwg-fetch'
 export const 
   INITIAL = 'INITIAL',
   REFRESH = 'REFRESH',
-  TOGGLE = 'TOGGLE'
+  TOGGLE = 'TOGGLE',
+  DEAL = 'DEAL'
 
 export let initial = () => ({type: INITIAL})
 export let request = value => dispatch => fetch(value.url).then(
@@ -15,4 +16,5 @@ export let request = value => dispatch => fetch(value.url).then(
 )
 export let refresh = value => ({type: REFRESH, value})
 export let toggle = () => ({type: TOGGLE})
+export let deal = value => ({type: DEAL, value})
 

@@ -33,11 +33,12 @@ const history = useRouterHistory(createHashHistory)()
 render(
     <Provider store={store}>
       <Router history={history}>
-        <Route path="/" component={app}>
+        <Route path='/' component={app}>
           <IndexRoute component={cases} />
-          <Route path="email" component={email}/>
-          <Route path="case" component={cases}/>
-          <Route path="task" component={tasks}/>
+          <Route path='email' component={email}/>
+          <Route path='email/:email_id' component={email}/>
+          <Route path='case' component={cases}/>
+          <Route path='task' component={tasks}/>
         </Route>
       </Router>
     </Provider>,

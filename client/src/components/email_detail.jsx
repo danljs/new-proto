@@ -14,10 +14,10 @@ class email_detail extends React.Component{
     const {ui, actions} = this.props
     const from = 'From: Mike Red<miker@hotmial.com>'
     return (
-      <div className='mdetail'>
+      <div className='detail'>
         <div>{from}</div>
         <div>Date: Jun 5, 2016</div>
-        <div>Subject: Perdidit meae Card</div>
+        <div>Subject: {this.props.emailId} Perdidit meae Card</div>
         <hr/>
         <div className='content'>
           <div>A qui cela concerne,</div>

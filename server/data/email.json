@@ -1,86 +1,247 @@
 {
-   "success":true,
-   "id":"email",
-   "list":[
-      {
-         "id":"0",
-         "subject":"sub1",
-         "from":"from1",
-         "date":"date1",
-         "detail":[
-            {
-               "id":"id1",
-               "content":"asdkfjaskfjlasdjflaskdjfldaskjfWood"
-            },
-            {
-               "id":"id2",
-               "content":"asdkfjaskfjlasdjflaskdjfldaskjfWood"
-            },
-            {
-               "id":"id3",
-               "content":"asdkfjaskfjlasdjflaskdjfldaskjfWood"
-            }
-         ]
-      },
-      {
-         "id":"1",
-         "subject":"sub1",
-         "from":"from1",
-         "date":"date1",
-         "detail":[
-            {
-               "id":"id1",
-               "content":"asdkfjaskfjlasdjflaskdjfldaskjfWood"
-            },
-            {
-               "id":"id2",
-               "content":"asdkfjaskfjlasdjflaskdjfldaskjfWood"
-            },
-            {
-               "id":"id3",
-               "content":"asdkfjaskfjlasdjflaskdjfldaskjfWood"
-            }
-         ]
-      },
-      {
-         "id":"2",
-         "subject":"sub1",
-         "from":"from1",
-         "date":"date1",
-         "detail":[
-            {
-               "id":"id1",
-               "content":"asdkfjaskfjlasdjflaskdjfldaskjfWood"
-            },
-            {
-               "id":"id2",
-               "content":"asdkfjaskfjlasdjflaskdjfldaskjfWood"
-            },
-            {
-               "id":"id3",
-               "content":"asdkfjaskfjlasdjflaskdjfldaskjfWood"
-            }
-         ]
-      },
-      {
-         "id":"3",
-         "subject":"sub1",
-         "from":"from1",
-         "date":"date1",
-         "detail":[
-            {
-               "id":"id1",
-               "content":"asdkfjaskfjlasdjflaskdjfldaskjfWood"
-            },
-            {
-               "id":"id2",
-               "content":"asdkfjaskfjlasdjflaskdjfldaskjfWood"
-            },
-            {
-               "id":"id3",
-               "content":"asdkfjaskfjlasdjflaskdjfldaskjfWood"
-            }
-         ]
-      }
-   ]
+  "success":true,
+  "id":"email",
+  "list":[
+    {
+      "id":"0",
+      "subject":"subject0",
+      "name":"Mike Red",
+      "address":"miker@hotmial.com",
+      "date":"April 5, 2016",
+      "state":"inbox",
+      "selected": false, 
+      "content":[
+        "A qui cela concerne",
+        "",
+        "Aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks. Sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Diego Sanchex et Sofia",
+        "1234 Circle Lane",
+        "Toronto.ON"
+      ]
+    },
+    {
+      "id":"1",
+      "subject":"subject1",
+      "name":"John Ive",
+      "address":"ive@apppp.com",
+      "date":"Jun 15, 2016",
+      "state":"inbox",
+      "selected": false,
+      "content":[
+        "A qui cela concerne",
+        "",
+        "Aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks. Sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Diego Sanchex et Sofia",
+        "1234 Circle Lane",
+        "Toronto.ON"
+      ]
+    },
+    {
+      "id":"2",
+      "subject":"subject2",
+      "name":"Step Goal",
+      "address":"sgoal@yahoo.com",
+      "date":"Sep 18, 2016",
+      "state":"inbox",
+      "selected": false,
+      "content":[
+        "A qui cela concerne",
+        "",
+        "Aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks. Sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Diego Sanchex et Sofia",
+        "1234 Circle Lane",
+        "Toronto.ON"
+      ]
+    },
+    {
+      "id":"3",
+      "subject":"subject3",
+      "name":"Dany Loop",
+      "address":"dloop@gmail.com",
+      "date":"Dec 20, 2016",
+      "state":"inbox",
+      "selected": false,
+      "content":[
+        "A qui cela concerne",
+        "",
+        "Aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks. Sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Diego Sanchex et Sofia",
+        "1234 Circle Lane",
+        "Toronto.ON"
+      ]
+    },
+    {
+      "id":"4",
+      "subject":"subject4",
+      "name":"Dany Loop",
+      "address":"dloop@gmail.com",
+      "date":"Dec 20, 2016",
+      "state":"inbox",
+      "selected": false,
+      "content":[
+        "A qui cela concerne",
+        "",
+        "Aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks. Sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Diego Sanchex et Sofia",
+        "1234 Circle Lane",
+        "Toronto.ON"
+      ]
+    },
+    {
+      "id":"5",
+      "subject":"subject5",
+      "name":"Dany Loop",
+      "address":"dloop@gmail.com",
+      "date":"Dec 20, 2016",
+      "state":"starred",
+      "selected": false,
+      "content":[
+        "A qui cela concerne",
+        "",
+        "Aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks. Sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Diego Sanchex et Sofia",
+        "1234 Circle Lane",
+        "Toronto.ON"
+      ]
+    },
+    {
+      "id":"6",
+      "subject":"subject6",
+      "name":"Dany Loop",
+      "address":"dloop@gmail.com",
+      "date":"Dec 20, 2016",
+      "state":"inbox",
+      "selected": false,
+      "content":[
+        "A qui cela concerne",
+        "",
+        "Aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks. Sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Diego Sanchex et Sofia",
+        "1234 Circle Lane",
+        "Toronto.ON"
+      ]
+    },
+    {
+      "id":"7",
+      "subject":"subject7",
+      "name":"Dany Loop",
+      "address":"dloop@gmail.com",
+      "date":"Dec 20, 2016",
+      "state":"starred",
+      "selected": false,
+      "content":[
+        "A qui cela concerne",
+        "",
+        "Aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks. Sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Diego Sanchex et Sofia",
+        "1234 Circle Lane",
+        "Toronto.ON"
+      ]
+    },
+    {
+      "id":"8",
+      "subject":"subject8",
+      "name":"Dany Loop",
+      "address":"dloop@gmail.com",
+      "date":"Dec 20, 2016",
+      "state":"inbox",
+      "selected": false,
+      "content":[
+        "A qui cela concerne",
+        "",
+        "Aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks. Sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Diego Sanchex et Sofia",
+        "1234 Circle Lane",
+        "Toronto.ON"
+      ]
+    },
+    {
+      "id":"9",
+      "subject":"subject9",
+      "name":"Dany Loop",
+      "address":"dloop@gmail.com",
+      "date":"Dec 20, 2016",
+      "state":"starred",
+      "selected": false,
+      "content":[
+        "A qui cela concerne",
+        "",
+        "Aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks. Sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow sdkjhd asdfj sdkdhs sdkjhdl asdfhsks sdkfh sdhdskdf kjhdsfk sdhwj kjhdsfk kjhdsfk aidj djow.",
+        "",
+        "Diego Sanchex et Sofia",
+        "1234 Circle Lane",
+        "Toronto.ON"
+      ]
+    }
+
+  ]
 }

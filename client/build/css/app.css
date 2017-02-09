@@ -43,21 +43,21 @@
   position: absolute;
 }
 .emailBox .bottom .detail {
-  min-width: 866px;
+  min-width: 912px;
   border: 1px solid #ededed;
   line-height: 1.4em;
   background: #fff;
   box-shadow: 0 0 30px black;
-  margin: 0px 20px 40px 20px;
+  margin: 0px 30px 20px 20px;
   padding: 10px 10px 10px 10px;
-  height: 225px;
+  height: 280px;
 }
 .emailBox .bottom .detail hr {
   margin: 0px 0px 0px 0px;
 }
 .emailBox .bottom .detail .content {
   overflow-y: auto;
-  height: 120px;
+  height: 200px;
 }
 .emailBox .list {
   width: 100%;
@@ -65,66 +65,66 @@
   font-size: 18px;
   font-family: inherit;
   font-weight: inherit;
-}
-.emailBox .list .left1 {
   min-width: 485px;
-  width: 100%;
 }
-.emailBox .list .left1 .main {
+.emailBox .list .main {
   line-height: 1.4em;
   background: #fff;
   margin: 0px 20px 40px 20px;
   padding: 10px 10px 10px 10px;
   box-shadow: 0 0 30px black;
 }
-.emailBox .list .left1 .main a:hover {
+.emailBox .list .main a:hover {
   cursor: pointer;
 }
-.emailBox .list .left1 .main table {
+.emailBox .list .main table {
   margin-top: -1px;
   margin-bottom: 0px;
   border: 1px solid #ededed;
 }
-.emailBox .list .left1 .main table .highlight {
+.emailBox .list .main table .highlight {
   background-color: #337ab7;
 }
-.emailBox .list .left1 .main .table-fixed thead {
+.emailBox .list .main .table-fixed thead {
   width: 98%;
 }
-.emailBox .list .left1 .main .table-fixed tbody {
+.emailBox .list .main .table-fixed tbody {
   overflow-y: auto;
   height: 200px;
   width: 100%;
 }
-.emailBox .list .left1 .main .table-fixed thead,
-.emailBox .list .left1 .main .table-fixed tbody,
-.emailBox .list .left1 .main .table-fixed td,
-.emailBox .list .left1 .main .table-fixed th {
+.emailBox .list .main .table-fixed thead,
+.emailBox .list .main .table-fixed tbody,
+.emailBox .list .main .table-fixed td,
+.emailBox .list .main .table-fixed th {
   display: block;
 }
-.emailBox .list .left1 .main .table-fixed tbody td,
-.emailBox .list .left1 .main .table-fixed thead > tr > th {
+.emailBox .list .main .table-fixed tbody td,
+.emailBox .list .main .table-fixed thead > tr > th {
   float: left;
   border-bottom-width: 0;
 }
-.emailBox .list .left1 .main .table-fixed tr {
+.emailBox .list .main .table-fixed tr {
   display: inline-block;
   width: 100%;
 }
-.emailBox .list .left1 .main .footer {
+.emailBox .list .main .table-fixed tr:hover {
+  cursor: pointer;
+}
+.emailBox .list .main .footer {
   color: #777;
   height: 35px;
   text-align: right;
 }
-.emailBox .list .left1 .main .footer .deal {
+.emailBox .list .main .footer .deal {
   float: left;
   margin-top: 4px;
   height: 33px;
 }
-.emailBox .list .left1 .main .footer .pagination {
+.emailBox .list .main .footer .pagination {
   padding-top: 4px;
   margin: 0px 0px 0px 0px;
 }
-.emailBox .list .left1 .main .footer .pagination li a {
+.emailBox .list .main .footer .pagination li a {
   padding: 3px 12px 3px 12px;
 }

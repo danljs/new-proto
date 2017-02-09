@@ -23,6 +23,19 @@ app.get('/email', (req, res) => {
     }
   });
 });
+app.get('/email/:id', (req, res) => {
+  console.log(req.params.id)
+  fs.readFile(`${data_dir}/email.json`, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.send(err);
+    } else {
+      console.log(JSON.parse(data).list.find(c => c.id === req.params.id))
+      res.send(JSON.parse(data).list.find(c => c.id === req.params.id))
+    }
+  });
+});
 
 let port = process.env.PORT || 3000
 app.listen(port, () => console.log(`Application worker ${process.pid} started at ${port}...`))
+

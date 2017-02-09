@@ -13,7 +13,7 @@ class cases extends React.Component{
   render() {
     const {ui, actions} = this.props
     return (
-      <div className='email'>
+      <div className='case'>
         <h1>Case</h1>
         <div className='left hide-detail'>
           <div className='main'>

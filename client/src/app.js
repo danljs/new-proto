@@ -5,8 +5,7 @@ import React from 'react'
 import { render } from 'react-dom'
 
 import { Provider } from 'react-redux'
-import {Router, Route, IndexRoute, useRouterHistory} from 'react-router'
-//import { syncHistoryWithStore} from 'react-router-redux'
+import { Router, Route, IndexRoute, useRouterHistory, browserHistory } from 'react-router'
 
 import { createHashHistory } from 'history'
 
@@ -28,6 +27,8 @@ class app extends React.Component{
 	}
 }
 //const history = syncHistoryWithStore(useRouterHistory(createHashHistory)({ queryKey: false }), store)
+// const history = syncHistoryWithStore(browserHistory, store)
+
 const history = useRouterHistory(createHashHistory)()
 
 render(

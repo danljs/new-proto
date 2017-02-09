@@ -13,7 +13,7 @@ class tasks extends React.Component{
   render() {
     const {ui, actions} = this.props
     return (
-      <div className='email'>
+      <div className='task'>
         <h1>Task</h1>
         <div className='left hide-detail'>
           <div className='main'>

@@ -20,6 +20,7 @@ class list extends React.Component{
     const {ui, actions, router} = this.props
     const pages = [{ no: 1 }, { no: 2 }, { no: 3 }, { no: 4 }, { no: 5 }]
     console.log('list')
+    // debugger
     return (
       <div className='list'>
         <div className='main'>

@@ -9,7 +9,7 @@ export const
 
 export let initial = () => ({type: INITIAL})
 export let request = value => dispatch => fetch(value.url).then(
-  response => response.json().then(data => dispatch(refresh(data)))
+  response => response.json().then(data => dispatch(refresh({id: value.id, data})))
 )
 export let refresh = value => ({type: REFRESH, value})
 

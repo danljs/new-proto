@@ -10,8 +10,7 @@ class email extends React.Component{
     super(props)
   }
   componentDidMount() {
-    this.props.actions.request({url: this.props.ui.url})
-    this.props.actions.detail({id: this.props.params.email_id})
+    this.props.actions.request({url: this.props.ui.url, id: this.props.params.email_id})
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.params.email_id !== this.props.params.email_id) {

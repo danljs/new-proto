@@ -31,13 +31,18 @@ export default (state = initialState, action) => {
           to: 'inbox',
           data: []
         },
-        detail: {content: []}
+        detail: {
+          id: '',
+          content: []
+        }
       }
     case REFRESH:
       new_state = Object.assign({}, state)
       new_state.inbox.data = []
       new_state.starred.data = []
-      action.value.list.map(c => new_state[c.state].data.push(c))
+      action.value.data.list.map(c => new_state[c.state].data.push(c))
+      const detail = action.value.data.list.find(c => action.value.id === c.id)
+      if (detail) new_state.detail = detail
       return new_state
     case DEAL:
       new_state = Object.assign({}, state)

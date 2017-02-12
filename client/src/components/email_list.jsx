@@ -21,7 +21,7 @@ class list extends React.Component{
     nextProps.ui[this.props.folder].data.length !== this.props.ui[this.props.folder].data.length
   }
   componentDidUpdate(prevProps, prevState){
-    this.refs.highlight.scrollIntoView()
+    if (this.refs.highlight) this.refs.highlight.scrollIntoView()
   }
   render() {
     const {ui, actions, router, params} = this.props

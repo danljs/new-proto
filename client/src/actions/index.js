@@ -1,6 +1,6 @@
 'use strict'
 import 'whatwg-fetch'
-
+const url = 'http://localhost:3000/email'
 export const 
   INITIAL = 'INITIAL',
   REFRESH = 'REFRESH',
@@ -8,14 +8,14 @@ export const
   DETAIL = 'DETAIL'
 
 export let initial = () => ({type: INITIAL})
-export let request = value => dispatch => fetch(value.url).then(
-  response => response.json().then(data => dispatch(refresh({id: value.id, data})))
+export let request = () => dispatch => fetch(url).then(
+  response => response.json().then(data => dispatch(refresh(data)))
 )
 export let refresh = value => ({type: REFRESH, value})
 
 export let deal = value => ({type: DEAL, value})
 
-export let detail = value => dispatch => fetch('http://localhost:3000/email/' + value.id).then(
+export let detail = value => dispatch => fetch(`${url}/${value.id}`).then(
   response => response.json().then(data => dispatch(refresh_detail(data)))
 )
 export let refresh_detail = value => ({type: DETAIL, value})

@@ -5,24 +5,30 @@ import { connect } from 'react-redux'
 import {withRouter} from 'react-router'
 
 import * as Actions from '../actions'
-import Mdetail from './email_detail'
 
 class list extends React.Component{
   constructor(props) {
     super(props)
     this.state={ 
       active: 0,
-      page: 1
+      page: 1,
+      count: 0
     }
   }
-
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.ui[this.props.folder].data.length === 0 || 
+    nextProps.ui.detail.id !== this.props.ui.detail.id || 
+    nextProps.ui[this.props.folder].data.length !== this.props.ui[this.props.folder].data.length
+  }
+  componentDidUpdate(prevProps, prevState){
+    this.refs.highlight.scrollIntoView()
+  }
   render() {
-    const {ui, actions, router} = this.props
+    const {ui, actions, router, params} = this.props
     const pages = [{ no: 1 }, { no: 2 }, { no: 3 }, { no: 4 }, { no: 5 }]
-    console.log('list')
-    // debugger
     return (
       <div className='list'>
+        <h4>{this.props.folder}</h4>
         <div className='main'>
           <table className='table table-fixed table-hover table-striped'>
             <thead>
@@ -32,13 +38,16 @@ class list extends React.Component{
                 <th className='col-xs-6'>From</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className={params.email_id ? 'half' : 'full'}>
             {
               ui[this.props.folder].data.map((c,i) => 
-                <tr key={i} className={c.id === ui.detail.id ? 'highlight' : ''} 
-                  onClick={e => router.push(`/email/${c.id}`)}>
+                <tr key={i} ref={c.id === ui.detail.id ? 'highlight' : ''} className={c.id === ui.detail.id ? 'highlight' : ''} 
+                  onClick={e => {
+                    c.selected = !c.selected
+                    if(c.id !== ui.detail.id) router.push(`/email/${c.id}`)
+                  }}>
                   <td className='col-xs-3'>
-                    <input type='checkBox' checked={c.selected} onChange={()=>c.selected = !c.selected}/>
+                    <input type='checkBox' checked={c.selected} onChange={()=>{console.log('aa')}}/>
                     &nbsp;{c.id}
                   </td>
                   <td className='col-xs-3'>{c.subject}</td>
@@ -79,4 +88,4 @@ let mapDispatchToProps = dispatch =>({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withRouter(list))
+)(withRouter(list, {withRef: true}))

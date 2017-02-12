@@ -2,6 +2,8 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import {withRouter} from 'react-router'
+
 import * as Actions from '../actions'
 
 class detail extends React.Component{
@@ -9,11 +11,19 @@ class detail extends React.Component{
     super(props)
     this.state = {}
   }
-
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.ui.detail.id === '' 
+      || nextProps.params.email_id !== this.props.params.email_id) {
+      this.props.actions.detail({id: nextProps.params.email_id})
+    }
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.params.email_id !== this.props.params.email_id 
+    || nextProps.ui.detail.id !== this.props.ui.detail.id
+  }
   render() {
     const {ui, actions} = this.props
     const from = `${ui.detail.name}<${ui.detail.address}>`
-    console.log('detail')
     return (
       <div className='detail'>
       {
@@ -45,4 +55,5 @@ let mapDispatchToProps = dispatch =>({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(detail)
+// )withRouter(detail)
+)(withRouter(detail, {withRef: true}))

@@ -2,8 +2,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { withRouter } from 'react-router'
+
 import * as Actions from '../actions'
-import {withRouter, browserHistory} from 'react-router'
 
 class header extends React.Component{
   constructor(props) {

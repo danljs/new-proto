@@ -1,53 +1,39 @@
 'use strict'
-import { INITIAL, REFRESH, DEAL, DETAIL, ACTIVE} from '../actions/index'
+import { INITIAL, REFRESH, DEAL, DETAIL } from '../actions/index'
 
-const initialState = {
-  data: {},
-  display: false,
-  inbox:  {
-    to: 'starred',
-    data: []
-  },
-  starred: {
-    to: 'inbox',
-    data: []
-  },
-  detail: {}
-}
+const initialState = {}
 export default (state = initialState, action) => {
-  let new_state = {}
+  let new_state = {
+    url: 'http://localhost:3000/email',
+    inbox: {
+      to: 'junk',
+      data: []
+    },
+    junk: {
+      to: 'inbox',
+      data: []
+    },
+    detail: {
+      id: '',
+      content: []
+    }
+  }
 
   switch (action.type) {
     case INITIAL:
-      return {
-        url: 'http://localhost:3000/email',
-        from: 0,
-        size: 10,
-        inbox: {
-          to: 'starred',
-          data: []
-        },
-        starred: {
-          to: 'inbox',
-          data: []
-        },
-        detail: {
-          id: '',
-          content: []
-        }
-      }
+      return new_state
     case REFRESH:
-      new_state = Object.assign({}, state)
-      new_state.inbox.data = []
-      new_state.starred.data = []
-      action.value.data.list.map(c => new_state[c.state].data.push(c))
-      const detail = action.value.data.list.find(c => action.value.id === c.id)
-      if (detail) new_state.detail = detail
+      // for(let i = 0 ; i < 10 ; i++){
+      //   action.value.list.map(c => new_state[c.state].data.push(c))
+      // }
+      action.value.list.map(c => new_state[c.state].data.push(c))
       return new_state
     case DEAL:
-      new_state = Object.assign({}, state)
-      state[action.value].data.filter(c => c.selected).map(c => new_state[new_state[action.value].to].data.push(c))
-      new_state[action.value].data = state[action.value].data.filter(c => !c.selected)
+      new_state.inbox.data = [...state.inbox.data]
+      new_state.junk.data = [...state.junk.data]
+      new_state.detail = state.detail
+      new_state[action.value].data.filter(c => c.selected).map(c => new_state[new_state[action.value].to].data.push(c))
+      new_state[action.value].data = new_state[action.value].data.filter(c => !c.selected)
       return new_state
     case DETAIL:
       new_state = Object.assign({}, state)

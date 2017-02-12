@@ -39,7 +39,7 @@
   width: 100%;
   right: 0px;
   margin-top: 5px;
-  bottom: 0px;
+  bottom: -15px;
   position: absolute;
 }
 .emailBox .bottom .detail {
@@ -67,6 +67,11 @@
   font-weight: inherit;
   min-width: 485px;
 }
+.emailBox .list h4 {
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
 .emailBox .list .main {
   line-height: 1.4em;
   background: #fff;
@@ -90,8 +95,13 @@
 }
 .emailBox .list .main .table-fixed tbody {
   overflow-y: auto;
-  height: 200px;
   width: 100%;
+}
+.emailBox .list .main .table-fixed .half {
+  height: 200px;
+}
+.emailBox .list .main .table-fixed .full {
+  height: 475px;
 }
 .emailBox .list .main .table-fixed thead,
 .emailBox .list .main .table-fixed tbody,

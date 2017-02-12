@@ -5,8 +5,6 @@ import { initial } from '../actions'
 
 export default (()=>{
   const store = createStore(rootReducer, {}, applyMiddleware(thunk))
-  store.dispatch
   store.dispatch(initial())
-  //...
   return store
 }())

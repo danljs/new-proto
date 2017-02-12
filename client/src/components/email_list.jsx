@@ -21,7 +21,8 @@ class list extends React.Component{
     nextProps.ui[this.props.folder].data.length !== this.props.ui[this.props.folder].data.length
   }
   componentDidUpdate(prevProps, prevState){
-    if (this.refs.highlight) this.refs.highlight.scrollIntoView()
+    // debugger
+    if (this.refs.highlight) this.refs.highlight.scrollIntoViewIfNeeded()
   }
   render() {
     const {ui, actions, router, params} = this.props
@@ -59,6 +60,7 @@ class list extends React.Component{
           </table>
           <div className='footer'>
             <button className='deal' onClick={()=>actions.deal(this.props.folder)}>Todo</button>
+            {/*
             <nav aria-label='Page navigation'><ul className='pagination'>
               <li><a onClick={() => ''} aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>
               {
@@ -70,6 +72,7 @@ class list extends React.Component{
               }
               <li><a onClick={() => ''} aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>
             </ul></nav>
+          */}
           </div>
         </div>
       </div>

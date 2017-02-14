@@ -22,14 +22,13 @@
   color: red;
 }
 .emailBox .left {
-  position: absolute;
   float: left;
   padding-top: 10px;
   width: 50%;
   height: 50%;
 }
 .emailBox .right {
-  position: absolute;
+  float: right;
   padding-top: 10px;
   width: 50%;
   right: 10px;
@@ -40,7 +39,7 @@
   right: 0px;
   margin-top: 5px;
   bottom: 0px;
-  position: absolute;
+  float: left;
 }
 .emailBox .bottom .detail {
   min-width: 912px;

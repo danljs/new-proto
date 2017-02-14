@@ -14,7 +14,7 @@ class email extends React.Component{
     this.props.actions.request()
   }
   componentWillReceiveProps(nextProps) {
-    if(!nextProps.params.email_id){
+    if(this.props.params.email_id && !nextProps.params.email_id){
       this.props.actions.request()
     }
   }
@@ -22,6 +22,7 @@ class email extends React.Component{
     return nextProps.params.email_id !== this.props.params.email_id
   }
   render() {
+    console.log('email.render')
     const {ui, actions, params} = this.props
     return (
       <div className='emailBox'>

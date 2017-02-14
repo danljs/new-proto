@@ -9,24 +9,22 @@ import * as Actions from '../actions'
 class list extends React.Component{
   constructor(props) {
     super(props)
-    this.state={ 
-      active: 0,
-      page: 1,
-      count: 0
+    this.state={
+      checked: false
     }
   }
   shouldComponentUpdate(nextProps, nextState) {
-    return this.props.ui[this.props.folder].data.length === 0 || 
+    return nextState.checked !== this.state.checked ||
+    this.props.ui[this.props.folder].data.length === 0 || 
     nextProps.ui.detail.id !== this.props.ui.detail.id || 
     nextProps.ui[this.props.folder].data.length !== this.props.ui[this.props.folder].data.length
   }
   componentDidUpdate(prevProps, prevState){
-    // debugger
     if (this.refs.highlight) this.refs.highlight.scrollIntoViewIfNeeded()
   }
   render() {
+    console.log('list.render')
     const {ui, actions, router, params} = this.props
-    const pages = [{ no: 1 }, { no: 2 }, { no: 3 }, { no: 4 }, { no: 5 }]
     return (
       <div className='list'>
         <h4>{this.props.folder}</h4>
@@ -45,7 +43,11 @@ class list extends React.Component{
                 <tr key={i} ref={c.id === ui.detail.id ? 'highlight' : ''} className={c.id === ui.detail.id ? 'highlight' : ''} 
                   onClick={e => {
                     c.selected = !c.selected
-                    if(c.id !== ui.detail.id) router.push(`/email/${c.id}`)
+                    if (c.id !== ui.detail.id ) {
+                      router.push(`/email/${c.id}`)
+                    }else{
+                      this.setState({checked: !this.state.checked})
+                    }
                   }}>
                   <td className='col-xs-3'>
                     <input type='checkBox' checked={c.selected} onChange={()=>{console.log('aa')}}/>
@@ -60,19 +62,6 @@ class list extends React.Component{
           </table>
           <div className='footer'>
             <button className='deal' onClick={()=>actions.deal(this.props.folder)}>Todo</button>
-            {/*
-            <nav aria-label='Page navigation'><ul className='pagination'>
-              <li><a onClick={() => ''} aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>
-              {
-                pages.map(c =>
-                  <li key={c.no} className={this.state.page === c.no ? 'active' : ''}>
-                    <a onClick={()=>this.setState({page: c.no})}>{c.no}</a>
-                  </li>
-                )
-              }
-              <li><a onClick={() => ''} aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>
-            </ul></nav>
-          */}
           </div>
         </div>
       </div>

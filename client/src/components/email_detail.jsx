@@ -18,10 +18,10 @@ class detail extends React.Component{
     }
   }
   shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.params.email_id !== this.props.params.email_id 
-    || nextProps.ui.detail.id !== this.props.ui.detail.id
+    return nextProps.ui.detail.id !== this.props.ui.detail.id
   }
   render() {
+    console.log('detail.render')
     const {ui, actions} = this.props
     const from = `${ui.detail.name}<${ui.detail.address}>`
     return (
@@ -32,6 +32,7 @@ class detail extends React.Component{
           <div>From: {from}</div>
           <div>Date: {ui.detail.date}</div>
           <div>Subject: {ui.detail.subject}</div>
+          <h4>{ui.detail.subject}</h4>
           <hr/>
           <div className='content'>
           {ui.detail.content.map((c, i) => <div key={i}>{c === "" ? <br/> : <div>{c}</div>}</div>)}

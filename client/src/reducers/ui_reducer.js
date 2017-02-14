@@ -26,6 +26,7 @@ export default (state = initialState, action) => {
       // for(let i = 0 ; i < 10 ; i++){
       //   action.value.list.map(c => new_state[c.state].data.push(c))
       // }
+      console.log('REFRESH')
       action.value.list.map(c => new_state[c.state].data.push(c))
       return new_state
     case DEAL:
